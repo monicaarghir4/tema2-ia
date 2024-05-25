@@ -230,6 +230,19 @@ data.loc[:, categorical_data_col] = categorical_data
 
 ##################################################################################################
 
+# Renuntarea la atributele redundante
+columns_to_drop = ['mean_blood_sugar_level', 'chaotic_sleep', 'married']
+
+data = data.drop(columns=columns_to_drop)
+
+# Actualizarea datelor
+numerical_data_col = [column for column in numerical_data_col if column not in columns_to_drop]
+categorical_data_col = [column for column in categorical_data_col if column not in columns_to_drop]
+
+print(data.head(1))
+
+##################################################################################################
+
 # Normalizarea datelor numerice
 min_max_scaler = MinMaxScaler()
 

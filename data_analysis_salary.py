@@ -210,6 +210,20 @@ data_imputed = pd.concat([numerical_data, categorical_data], axis=1)
 
 ##################################################################################################
 
+# Renuntarea la atributele redundante
+columns_to_drop = ['prod', 'relation', 'gtype', 'gender', 'edu', 'race', 'work_type']
+
+data_imputed = data_imputed.drop(columns=columns_to_drop)
+
+# Actualizeaza datele
+numerical_data_col = [column for column in numerical_data_col if column not in columns_to_drop]
+categorical_data_col = [column for column in categorical_data_col if column not in columns_to_drop]
+
+# Afisarea atributelor ramase
+print(data_imputed.head(1))
+
+##################################################################################################
+
 # Normalizarea datelor numerice
 min_max_scaler = MinMaxScaler()
 
