@@ -86,48 +86,6 @@ for column in categorical_columns_to_plot:
 
 ##################################################################################################
 
-# # Incarcarea datelor de antrenare si de testare
-# data_train = pd.read_csv('tema2_AVC/AVC_train.csv')
-# data_test = pd.read_csv('tema2_AVC/AVC_test.csv')
-
-# # Extragerea datelor categorice de antrenare si testare
-# train_categorical = data_train[categorical_columns]
-# test_categorical = data_test[categorical_columns]
-
-# # Crearea graficelor de tip barplot pentru fiecare atribut categoric
-# # din setul de antrenare
-# for column in train_categorical.columns:
-#     plt.figure(figsize=(10, 10))
-
-#     train_counts = train_categorical[column].value_counts().reset_index()
-#     train_counts.columns = [column, 'Frecventa']
-
-#     sns.barplot(x=column, y='Frecventa', data=train_counts)
-
-#     plt.title(f'Barplot pentru antrenare {column}')
-#     plt.xlabel(column)
-#     plt.ylabel('Frecventa')
-#     plt.xticks(rotation=90)
-#     plt.show()
-
-# # Crearea graficelor de tip barplot pentru fiecare atribut categoric
-# # din setul de testare
-# for column in test_categorical.columns:
-#     plt.figure(figsize=(10, 10))
-
-#     test_counts = test_categorical[column].value_counts().reset_index()
-#     test_counts.columns = [column, 'Frecventa']
-
-#     sns.barplot(x=column, y='Frecventa', data=test_counts)
-
-#     plt.title(f'Barplot pentru testare {column}')
-#     plt.xlabel(column)
-#     plt.ylabel('Frecventa')
-#     plt.xticks(rotation=90)
-#     plt.show()
-
-##################################################################################################
-
 # Matrice de corelatie pentru atributele numerice continue
 corr_matrix = numerical_cont.corr(method='pearson')
 plt.figure(figsize=(15, 15))

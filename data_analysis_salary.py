@@ -83,34 +83,6 @@ for column in categorical_columns_to_plot:
     plt.xticks(rotation=90)
     plt.show()
 
-# ##################################################################################################
-
-# # Incarcarea datelor de antrenare si de testare
-# data_train = pd.read_csv('tema2_SalaryPrediction/SalaryPrediction_train.csv')
-# data_test = pd.read_csv('tema2_SalaryPrediction/SalaryPrediction_test.csv')
-
-# # Crearea graficelor de tip barplot pentru fiecare atribut categoric
-# # din setul de antrenare
-# for column in data_train.columns:
-#     # plt.figure(figsize=(10, 10))
-
-#     # train_counts = data[column].value_counts().reset_index()
-#     # train_counts.columns = [column, 'Frecventa']
-
-#     # sns.barplot(x=column, y='Frecventa', data=train_counts)
-
-#     # plt.title(f'Barplot pentru antrenare {column}')
-#     # plt.xlabel(column)
-#     # plt.ylabel('Frecventa')
-#     # plt.xticks(rotation=90)
-#     # plt.show()
-#     plt.figure(figsize=(12, 6))
-#     sns.countplot(data=data_train, x=column)
-#     plt.title(f'Frecventa de aparitie a atributului "{column}" în setul de antrenare')
-#     plt.xlabel(column)
-#     plt.ylabel('Frecventa')
-#     plt.show()
-
 ##################################################################################################
 
 # Matrice de corelatie pentru atributele numerice continue
